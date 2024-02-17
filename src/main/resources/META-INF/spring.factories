@@ -1,0 +1,2 @@
+# Springboot Starter
+org.springframework.boot.autoconfigure.EnableAutoconfiguration=com.chilun.apiopenspace.starter.QuickAccessAutoConfiguration
