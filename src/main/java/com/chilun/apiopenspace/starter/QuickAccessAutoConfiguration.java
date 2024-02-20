@@ -1,5 +1,6 @@
 package com.chilun.apiopenspace.starter;
 
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2024-02-17-14:30
  */
 @Configuration
+@EnableConfigurationProperties(com.chilun.apiopenspace.starter.PublicKeyPrivateKeyUtils.class)
 public class QuickAccessAutoConfiguration {
 
     @Bean(name = "T")
