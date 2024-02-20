@@ -56,7 +56,7 @@ public class APIAccessClient<T> {
         //2发送请求
         Response response = okHttpClient.newCall(request).execute();
         if (!response.isSuccessful()) {
-            throw new RuntimeException("Failed to get response: " + response);
+            throw new RuntimeException("Failed to get response: " + response+"\n Body: "+(response.body()!=null?response.body().string():"null"));
         }
         return response;
     }
@@ -88,7 +88,7 @@ public class APIAccessClient<T> {
         OkHttpClient okHttpClient = new OkHttpClient();
         Response response = okHttpClient.newCall(request).execute();
         if (!response.isSuccessful()) {
-            throw new RuntimeException("Failed to get response: " + response);
+            throw new RuntimeException("Failed to get response: " + response+"\n Body: "+(response.body()!=null?response.body().string():"null"));
         }
         return response;
     }
